@@ -9,25 +9,42 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#121214"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "backgroundColor": "#121214"
+      },
+      "package": "com.straydergyn.mobile"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "plugins": [
+        [
+          "expo-notifications",
+          {
+            "icon": "./local/assets/notification-icon.png",
+            "color": "#ffffff",
+            "sounds": [
+              "./local/assets/notification-sound.wav",
+              "./local/assets/notification-sound-other.wav"
+            ]
+          }
+        ]
+      ],
+      "eas": {
+        "projectId": "8db59b20-0458-43bb-9dcc-915e10a84a17"
+      }
     }
   }
 }
